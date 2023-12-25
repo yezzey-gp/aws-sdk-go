@@ -1214,6 +1214,15 @@
         "requestChecksumRequired":true
       }
     },
+    "PatchObject": {
+      "name":"PatchObject",
+      "http":{
+        "method":"Patch",
+        "requestUri":"/{Bucket}/{Key+}"
+      },
+      "input":{"shape":"PatchObjectRequest"},
+      "output":{"shape":"PatchObjectOutput"}
+    },
     "PutPublicAccessBlock":{
       "name":"PutPublicAccessBlock",
       "http":{
@@ -7733,6 +7742,135 @@
         }
       },
       "payload":"Tagging"
+    },
+    "XAmzRequestId":{"type":"string"},
+    "PatchObjectOutput": {
+      "type": "structure",
+      "members": {
+        "ETag":{
+          "shape":"ETag",
+          "location":"header",
+          "locationName":"ETag"
+        },
+        "XAmzRequestId": {
+          "shape":"XAmzRequestId",
+          "location":"header",
+          "locationName":"X-Amz-Request-Id"
+        }
+      }
+    },
+    "Authorization":{"type":"string"},
+    "RequestDate":{"type":"timestamp"},
+    "Host":{"type":"string"},
+    "Expect":{
+      "type":"string",
+      "enum":[
+        "100-continue"
+      ]
+    },
+    "XAmzDate":{"type":"timestamp"},
+    "XYcS3PatchAppendPartSize":{"type":"integer"},
+    "PatchObjectRequest":{
+      "type":"structure",
+      "required":[
+        "Bucket",
+        "Key"
+      ],
+      "members":{
+        "Authorization": {
+          "shape":"Authorization",
+          "location":"header",
+          "locationName":"Authorization"
+        },
+        "Bucket":{
+          "shape":"BucketName",
+          "contextParam":{"name":"Bucket"},
+          "location":"uri",
+          "locationName":"Bucket"
+        },
+        "CacheControl":{
+          "shape":"CacheControl",
+          "location":"header",
+          "locationName":"Cache-Control"
+        },
+        "ContentDisposition":{
+          "shape":"ContentDisposition",
+          "location":"header",
+          "locationName":"Content-Disposition"
+        },
+        "ContentEncoding":{
+          "shape":"ContentEncoding",
+          "location":"header",
+          "locationName":"Content-Encoding"
+        },
+        "ContentLength":{
+          "shape":"ContentLength",
+          "location":"header",
+          "locationName":"Content-Length"
+        },
+        "ContentRange":{
+          "shape":"ContentRange",
+          "location":"header",
+          "locationName":"Content-Range"
+        },
+        "ContentMD5":{
+          "shape":"ContentMD5",
+          "location":"header",
+          "locationName":"Content-MD5"
+        },
+        "ContentType":{
+          "shape":"ContentType",
+          "location":"header",
+          "locationName":"Content-Type"
+        },
+        "Date": {
+          "shape":"RequestDate",
+          "location":"header",
+          "locationName":"Date"
+        },
+        "Expires":{
+          "shape":"Expires",
+          "location":"header",
+          "locationName":"Expires"
+        },
+        "Expect": {
+          "shape":"Expect",
+          "location":"header",
+          "locationName":"Expect"
+        },
+        "Host":{
+          "shape":"HostName",
+          "location":"header",
+          "locationName":"Host"
+        },
+        "IfMatch":{
+          "shape":"IfMatch",
+          "location":"header",
+          "locationName":"If-Match"
+        },
+        "IfUnmodifiedSince":{
+          "shape":"IfUnmodifiedSince",
+          "location":"header",
+          "locationName":"If-Unmodified-Since"
+        },
+        "Key":{
+          "shape":"ObjectKey",
+          "contextParam":{"name":"Key"},
+          "location":"uri",
+          "locationName":"Key"
+        },
+        "XAmzDate":{
+          "shape":"XAmzDate",
+          "location":"header",
+          "locationName":"Expires"
+        },
+        "XYcS3PatchAppendPartSize":{
+          "shape":"XYcS3PatchAppendPartSize",
+          "location":"header",
+          "locationName":"X-Yc-S3-Patch-Append-Part-Size"
+        }
+      },
+      "payload":"Body"
     },
     "PutPublicAccessBlockRequest":{
       "type":"structure",
