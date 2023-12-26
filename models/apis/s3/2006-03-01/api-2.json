@@ -7835,6 +7835,31 @@
           "location":"header",
           "locationName":"Content-Type"
         },
+        "ChecksumAlgorithm":{
+          "shape":"ChecksumAlgorithm",
+          "location":"header",
+          "locationName":"x-amz-sdk-checksum-algorithm"
+        },
+        "ChecksumCRC32":{
+          "shape":"ChecksumCRC32",
+          "location":"header",
+          "locationName":"x-amz-checksum-crc32"
+        },
+        "ChecksumCRC32C":{
+          "shape":"ChecksumCRC32C",
+          "location":"header",
+          "locationName":"x-amz-checksum-crc32c"
+        },
+        "ChecksumSHA1":{
+          "shape":"ChecksumSHA1",
+          "location":"header",
+          "locationName":"x-amz-checksum-sha1"
+        },
+        "ChecksumSHA256":{
+          "shape":"ChecksumSHA256",
+          "location":"header",
+          "locationName":"x-amz-checksum-sha256"
+        },
         "Date": {
           "shape":"RequestDate",
           "location":"header",

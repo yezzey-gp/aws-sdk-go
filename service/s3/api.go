@@ -33579,10 +33579,26 @@ type PatchObjectInput struct {
 
 	Authorization *string `location:"header" locationName:"Authorization" type:"string"`
 
+	Body io.ReadSeeker `type:"blob"`
+
 	// Bucket is a required field
 	Bucket *string `location:"uri" locationName:"Bucket" type:"string" required:"true"`
 
 	CacheControl *string `location:"header" locationName:"Cache-Control" type:"string"`
+
+	// The AWS SDK for Go v1 does not support automatic computing request payload
+	// checksum. This feature is available in the AWS SDK for Go v2. If a value
+	// is specified for this parameter, the matching algorithm's checksum member
+	// must be populated with the algorithm's checksum of the request payload.
+	ChecksumAlgorithm *string `location:"header" locationName:"x-amz-sdk-checksum-algorithm" type:"string" enum:"ChecksumAlgorithm"`
+
+	ChecksumCRC32 *string `location:"header" locationName:"x-amz-checksum-crc32" type:"string"`
+
+	ChecksumCRC32C *string `location:"header" locationName:"x-amz-checksum-crc32c" type:"string"`
+
+	ChecksumSHA1 *string `location:"header" locationName:"x-amz-checksum-sha1" type:"string"`
+
+	ChecksumSHA256 *string `location:"header" locationName:"x-amz-checksum-sha256" type:"string"`
 
 	ContentDisposition *string `location:"header" locationName:"Content-Disposition" type:"string"`
 
@@ -33590,7 +33606,8 @@ type PatchObjectInput struct {
 
 	ContentLength *int64 `location:"header" locationName:"Content-Length" type:"long"`
 
-	ContentRange *string `location:"header" locationName:"Content-Range" type:"string"`
+	// ContentRange is a required field
+	ContentRange *string `location:"header" locationName:"Content-Range" type:"string" required:"true"`
 
 	ContentType *string `location:"header" locationName:"Content-Type" type:"string"`
 
@@ -33641,6 +33658,9 @@ func (s *PatchObjectInput) Validate() error {
 	if s.Bucket != nil && len(*s.Bucket) < 1 {
 		invalidParams.Add(request.NewErrParamMinLen("Bucket", 1))
 	}
+	if s.ContentRange == nil {
+		invalidParams.Add(request.NewErrParamRequired("ContentRange"))
+	}
 	if s.Key == nil {
 		invalidParams.Add(request.NewErrParamRequired("Key"))
 	}
@@ -33660,6 +33680,12 @@ func (s *PatchObjectInput) SetAuthorization(v string) *PatchObjectInput {
 	return s
 }
 
+// SetBody sets the Body field's value.
+func (s *PatchObjectInput) SetBody(v io.ReadSeeker) *PatchObjectInput {
+	s.Body = v
+	return s
+}
+
 // SetBucket sets the Bucket field's value.
 func (s *PatchObjectInput) SetBucket(v string) *PatchObjectInput {
 	s.Bucket = &v
@@ -33676,6 +33702,36 @@ func (s *PatchObjectInput) getBucket() (v string) {
 // SetCacheControl sets the CacheControl field's value.
 func (s *PatchObjectInput) SetCacheControl(v string) *PatchObjectInput {
 	s.CacheControl = &v
+	return s
+}
+
+// SetChecksumAlgorithm sets the ChecksumAlgorithm field's value.
+func (s *PatchObjectInput) SetChecksumAlgorithm(v string) *PatchObjectInput {
+	s.ChecksumAlgorithm = &v
+	return s
+}
+
+// SetChecksumCRC32 sets the ChecksumCRC32 field's value.
+func (s *PatchObjectInput) SetChecksumCRC32(v string) *PatchObjectInput {
+	s.ChecksumCRC32 = &v
+	return s
+}
+
+// SetChecksumCRC32C sets the ChecksumCRC32C field's value.
+func (s *PatchObjectInput) SetChecksumCRC32C(v string) *PatchObjectInput {
+	s.ChecksumCRC32C = &v
+	return s
+}
+
+// SetChecksumSHA1 sets the ChecksumSHA1 field's value.
+func (s *PatchObjectInput) SetChecksumSHA1(v string) *PatchObjectInput {
+	s.ChecksumSHA1 = &v
+	return s
+}
+
+// SetChecksumSHA256 sets the ChecksumSHA256 field's value.
+func (s *PatchObjectInput) SetChecksumSHA256(v string) *PatchObjectInput {
+	s.ChecksumSHA256 = &v
 	return s
 }
 
@@ -33793,7 +33849,7 @@ func (s PatchObjectInput) updateArnableField(v string) (interface{}, error) {
 type PatchObjectOutput struct {
 	_ struct{} `type:"structure"`
 
-	ETag *string `location:"header" locationName:"ETag" type:"string"`
+	Object *PatchedObjectInfo `type:"structure"`
 
 	XAmzRequestId *string `location:"header" locationName:"X-Amz-Request-Id" type:"string"`
 }
@@ -33816,15 +33872,53 @@ func (s PatchObjectOutput) GoString() string {
 	return s.String()
 }
 
-// SetETag sets the ETag field's value.
-func (s *PatchObjectOutput) SetETag(v string) *PatchObjectOutput {
-	s.ETag = &v
+// SetObject sets the Object field's value.
+func (s *PatchObjectOutput) SetObject(v *PatchedObjectInfo) *PatchObjectOutput {
+	s.Object = v
 	return s
 }
 
 // SetXAmzRequestId sets the XAmzRequestId field's value.
 func (s *PatchObjectOutput) SetXAmzRequestId(v string) *PatchObjectOutput {
 	s.XAmzRequestId = &v
+	return s
+}
+
+type PatchedObjectInfo struct {
+	_ struct{} `type:"structure"`
+
+	ETag *string `type:"string"`
+
+	LastModified *time.Time `type:"timestamp"`
+}
+
+// String returns the string representation.
+//
+// API parameter values that are decorated as "sensitive" in the API will not
+// be included in the string output. The member name will be present, but the
+// value will be replaced with "sensitive".
+func (s PatchedObjectInfo) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation.
+//
+// API parameter values that are decorated as "sensitive" in the API will not
+// be included in the string output. The member name will be present, but the
+// value will be replaced with "sensitive".
+func (s PatchedObjectInfo) GoString() string {
+	return s.String()
+}
+
+// SetETag sets the ETag field's value.
+func (s *PatchedObjectInfo) SetETag(v string) *PatchedObjectInfo {
+	s.ETag = &v
+	return s
+}
+
+// SetLastModified sets the LastModified field's value.
+func (s *PatchedObjectInfo) SetLastModified(v time.Time) *PatchedObjectInfo {
+	s.LastModified = &v
 	return s
 }
 
