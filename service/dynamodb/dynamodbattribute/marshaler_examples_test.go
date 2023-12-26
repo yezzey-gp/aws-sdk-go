@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/service/dynamodb"
-	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/service/dynamodb"
+	"github.com/yezzey-gp/aws-sdk-go/service/dynamodb/dynamodbattribute"
 )
 
 func ExampleMarshal() {

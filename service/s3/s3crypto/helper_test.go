@@ -7,10 +7,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/awstesting"
-	"github.com/aws/aws-sdk-go/internal/sdkio"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/awstesting"
+	"github.com/yezzey-gp/aws-sdk-go/internal/sdkio"
 )
 
 func TestBytesReadWriteSeeker_Read(t *testing.T) {

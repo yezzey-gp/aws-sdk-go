@@ -7,12 +7,12 @@ import (
 	"os"
 	"testing"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/aws/aws-sdk-go/aws/client"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/awstesting/unit"
-	"github.com/aws/aws-sdk-go/service/dynamodb"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/awserr"
+	"github.com/yezzey-gp/aws-sdk-go/aws/client"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/awstesting/unit"
+	"github.com/yezzey-gp/aws-sdk-go/service/dynamodb"
 )
 
 var db *dynamodb.DynamoDB

@@ -9,9 +9,9 @@
 package managedgrafanaiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/managedgrafana"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/service/managedgrafana"
 )
 
 // ManagedGrafanaAPI provides an interface to enable mocking the

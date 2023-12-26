@@ -9,9 +9,9 @@
 package appconfigdataiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/appconfigdata"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/service/appconfigdata"
 )
 
 // AppConfigDataAPI provides an interface to enable mocking the

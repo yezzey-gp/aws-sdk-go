@@ -5,8 +5,8 @@ package prometheusservice
 import (
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
 )
 
 // WaitUntilScraperActive uses the Amazon Prometheus Service API operation

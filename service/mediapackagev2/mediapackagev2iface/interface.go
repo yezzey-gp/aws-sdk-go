@@ -9,9 +9,9 @@
 package mediapackagev2iface
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/mediapackagev2"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/service/mediapackagev2"
 )
 
 // MediaPackageV2API provides an interface to enable mocking the

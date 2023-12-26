@@ -9,9 +9,9 @@
 package networkmonitoriface
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/networkmonitor"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/service/networkmonitor"
 )
 
 // NetworkMonitorAPI provides an interface to enable mocking the

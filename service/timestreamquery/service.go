@@ -3,14 +3,14 @@
 package timestreamquery
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/client"
-	"github.com/aws/aws-sdk-go/aws/client/metadata"
-	"github.com/aws/aws-sdk-go/aws/crr"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/aws/signer/v4"
-	"github.com/aws/aws-sdk-go/private/protocol"
-	"github.com/aws/aws-sdk-go/private/protocol/jsonrpc"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/client"
+	"github.com/yezzey-gp/aws-sdk-go/aws/client/metadata"
+	"github.com/yezzey-gp/aws-sdk-go/aws/crr"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/aws/signer/v4"
+	"github.com/yezzey-gp/aws-sdk-go/private/protocol"
+	"github.com/yezzey-gp/aws-sdk-go/private/protocol/jsonrpc"
 )
 
 // TimestreamQuery provides the API operation methods for making requests to

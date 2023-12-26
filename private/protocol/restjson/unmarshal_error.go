@@ -8,11 +8,11 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/private/protocol"
-	"github.com/aws/aws-sdk-go/private/protocol/json/jsonutil"
-	"github.com/aws/aws-sdk-go/private/protocol/rest"
+	"github.com/yezzey-gp/aws-sdk-go/aws/awserr"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/private/protocol"
+	"github.com/yezzey-gp/aws-sdk-go/private/protocol/json/jsonutil"
+	"github.com/yezzey-gp/aws-sdk-go/private/protocol/rest"
 )
 
 const (

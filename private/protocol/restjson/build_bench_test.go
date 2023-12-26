@@ -9,13 +9,13 @@ import (
 	"os"
 	"testing"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/credentials"
-	"github.com/aws/aws-sdk-go/aws/endpoints"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/aws/aws-sdk-go/private/protocol/restjson"
-	"github.com/aws/aws-sdk-go/service/elastictranscoder"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/credentials"
+	"github.com/yezzey-gp/aws-sdk-go/aws/endpoints"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/aws/session"
+	"github.com/yezzey-gp/aws-sdk-go/private/protocol/restjson"
+	"github.com/yezzey-gp/aws-sdk-go/service/elastictranscoder"
 )
 
 var (

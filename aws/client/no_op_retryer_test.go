@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
 )
 
 func TestNoOpRetryer(t *testing.T) {

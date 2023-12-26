@@ -5,8 +5,8 @@ package medialive
 import (
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
 )
 
 // WaitUntilChannelCreated uses the MediaLive API operation

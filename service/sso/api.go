@@ -5,12 +5,12 @@ package sso
 import (
 	"fmt"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/awsutil"
-	"github.com/aws/aws-sdk-go/aws/credentials"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/private/protocol"
-	"github.com/aws/aws-sdk-go/private/protocol/restjson"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/awsutil"
+	"github.com/yezzey-gp/aws-sdk-go/aws/credentials"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/private/protocol"
+	"github.com/yezzey-gp/aws-sdk-go/private/protocol/restjson"
 )
 
 const opGetRoleCredentials = "GetRoleCredentials"

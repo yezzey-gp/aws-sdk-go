@@ -9,11 +9,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/aws/aws-sdk-go/aws/corehandlers"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/awstesting/unit"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/awserr"
+	"github.com/yezzey-gp/aws-sdk-go/aws/corehandlers"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/awstesting/unit"
 )
 
 type testReader struct {
@@ -30,7 +30,7 @@ func (r *testReader) Close() error {
 }
 
 // GetRecords will hang unexpectedly during reads.
-// See https://github.com/aws/aws-sdk-go/issues/1141
+// See https://github.com/yezzey-gp/aws-sdk-go/issues/1141
 func TestKinesisGetRecordsCustomization(t *testing.T) {
 	readDuration = time.Millisecond
 	retryCount := 0

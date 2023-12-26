@@ -4,12 +4,12 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/client"
-	"github.com/aws/aws-sdk-go/aws/client/metadata"
-	"github.com/aws/aws-sdk-go/aws/credentials"
-	"github.com/aws/aws-sdk-go/aws/defaults"
-	"github.com/aws/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/client"
+	"github.com/yezzey-gp/aws-sdk-go/aws/client/metadata"
+	"github.com/yezzey-gp/aws-sdk-go/aws/credentials"
+	"github.com/yezzey-gp/aws-sdk-go/aws/defaults"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
 )
 
 func TestMaxRetriesExceeded(t *testing.T) {

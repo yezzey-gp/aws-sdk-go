@@ -9,9 +9,9 @@
 package costoptimizationhubiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/costoptimizationhub"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/service/costoptimizationhub"
 )
 
 // CostOptimizationHubAPI provides an interface to enable mocking the

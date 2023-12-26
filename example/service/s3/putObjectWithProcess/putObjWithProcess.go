@@ -9,9 +9,9 @@ import (
 	"os"
 	"sync"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/aws/aws-sdk-go/service/s3/s3manager"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/session"
+	"github.com/yezzey-gp/aws-sdk-go/service/s3/s3manager"
 )
 
 type CustomReader struct {

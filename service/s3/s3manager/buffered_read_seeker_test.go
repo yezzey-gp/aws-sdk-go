@@ -5,7 +5,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/aws/aws-sdk-go/internal/sdkio"
+	"github.com/yezzey-gp/aws-sdk-go/internal/sdkio"
 )
 
 func TestBufferedReadSeekerRead(t *testing.T) {

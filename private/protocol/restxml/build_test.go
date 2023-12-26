@@ -15,17 +15,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/client"
-	"github.com/aws/aws-sdk-go/aws/client/metadata"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/aws/signer/v4"
-	"github.com/aws/aws-sdk-go/awstesting"
-	"github.com/aws/aws-sdk-go/awstesting/unit"
-	"github.com/aws/aws-sdk-go/private/protocol"
-	"github.com/aws/aws-sdk-go/private/protocol/restxml"
-	"github.com/aws/aws-sdk-go/private/protocol/xml/xmlutil"
-	"github.com/aws/aws-sdk-go/private/util"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/client"
+	"github.com/yezzey-gp/aws-sdk-go/aws/client/metadata"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/aws/signer/v4"
+	"github.com/yezzey-gp/aws-sdk-go/awstesting"
+	"github.com/yezzey-gp/aws-sdk-go/awstesting/unit"
+	"github.com/yezzey-gp/aws-sdk-go/private/protocol"
+	"github.com/yezzey-gp/aws-sdk-go/private/protocol/restxml"
+	"github.com/yezzey-gp/aws-sdk-go/private/protocol/xml/xmlutil"
+	"github.com/yezzey-gp/aws-sdk-go/private/util"
 )
 
 var _ bytes.Buffer // always import bytes

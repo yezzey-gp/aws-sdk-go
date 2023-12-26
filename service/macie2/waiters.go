@@ -5,8 +5,8 @@ package macie2
 import (
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
 )
 
 // WaitUntilFindingRevealed uses the Amazon Macie 2 API operation
