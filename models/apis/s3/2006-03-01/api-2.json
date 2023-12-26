@@ -1221,7 +1221,11 @@
         "requestUri":"/{Bucket}/{Key+}"
       },
       "input":{"shape":"PatchObjectRequest"},
-      "output":{"shape":"PatchObjectOutput"}
+      "output":{"shape":"PatchObjectOutput"},
+      "httpChecksum":{
+        "requestAlgorithmMember":"ChecksumAlgorithm",
+        "requestChecksumRequired":false
+      }
     },
     "PutPublicAccessBlock":{
       "name":"PutPublicAccessBlock",
@@ -7744,14 +7748,17 @@
       "payload":"Tagging"
     },
     "XAmzRequestId":{"type":"string"},
+    "PatchedObjectInfo":{
+      "type":"structure",
+      "members":{
+        "ETag":{"shape":"ETag"},
+        "LastModified":{"shape":"LastModified"}
+      }
+    },
     "PatchObjectOutput": {
       "type": "structure",
       "members": {
-        "ETag":{
-          "shape":"ETag",
-          "location":"header",
-          "locationName":"ETag"
-        },
+        "Object":{"shape":"PatchedObjectInfo"},
         "XAmzRequestId": {
           "shape":"XAmzRequestId",
           "location":"header",
@@ -7774,13 +7781,18 @@
       "type":"structure",
       "required":[
         "Bucket",
-        "Key"
+        "Key",
+        "ContentRange"
       ],
       "members":{
         "Authorization": {
           "shape":"Authorization",
           "location":"header",
           "locationName":"Authorization"
+        },
+        "Body":{
+          "shape":"Body",
+          "streaming":true
         },
         "Bucket":{
           "shape":"BucketName",
