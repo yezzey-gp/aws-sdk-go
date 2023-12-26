@@ -5,8 +5,8 @@ package transfer
 import (
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
 )
 
 // WaitUntilServerOffline uses the AWS Transfer API operation

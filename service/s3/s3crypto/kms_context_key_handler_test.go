@@ -13,9 +13,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/awstesting/unit"
-	"github.com/aws/aws-sdk-go/service/kms"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/awstesting/unit"
+	"github.com/yezzey-gp/aws-sdk-go/service/kms"
 )
 
 func TestKmsContextKeyHandler_GenerateCipherDataWithCEKAlg(t *testing.T) {

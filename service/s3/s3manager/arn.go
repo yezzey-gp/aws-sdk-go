@@ -2,7 +2,7 @@ package s3manager
 
 import (
 	"fmt"
-	"github.com/aws/aws-sdk-go/aws/arn"
+	"github.com/yezzey-gp/aws-sdk-go/aws/arn"
 )
 
 func validateSupportedARNType(bucket string) error {

@@ -3,7 +3,6 @@ module github.com/yezzey-gp/aws-sdk-go
 go 1.19
 
 require (
-	github.com/aws/aws-sdk-go v1.49.9
 	github.com/jmespath/go-jmespath v0.4.0
 	golang.org/x/net v0.17.0
 )

@@ -9,9 +9,9 @@
 package forecastqueryserviceiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/forecastqueryservice"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/service/forecastqueryservice"
 )
 
 // ForecastQueryServiceAPI provides an interface to enable mocking the

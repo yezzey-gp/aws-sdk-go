@@ -6,7 +6,7 @@ package awsutil
 import (
 	"testing"
 
-	"github.com/aws/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
 )
 
 type testPrettifyStruct struct {

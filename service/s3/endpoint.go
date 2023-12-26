@@ -2,16 +2,16 @@ package s3
 
 import (
 	"fmt"
-	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/aws/aws-sdk-go/aws/endpoints"
+	"github.com/yezzey-gp/aws-sdk-go/aws/awserr"
+	"github.com/yezzey-gp/aws-sdk-go/aws/endpoints"
 	"net/url"
 	"strings"
 
-	"github.com/aws/aws-sdk-go/aws"
-	awsarn "github.com/aws/aws-sdk-go/aws/arn"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/internal/s3shared"
-	"github.com/aws/aws-sdk-go/internal/s3shared/arn"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	awsarn "github.com/yezzey-gp/aws-sdk-go/aws/arn"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/internal/s3shared"
+	"github.com/yezzey-gp/aws-sdk-go/internal/s3shared/arn"
 )
 
 const (

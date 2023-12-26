@@ -10,12 +10,12 @@ import (
 	"os"
 	"testing"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/aws/aws-sdk-go/awstesting/integration"
-	"github.com/aws/aws-sdk-go/awstesting/integration/s3integ"
-	"github.com/aws/aws-sdk-go/service/s3"
-	"github.com/aws/aws-sdk-go/service/s3/s3manager"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/session"
+	"github.com/yezzey-gp/aws-sdk-go/awstesting/integration"
+	"github.com/yezzey-gp/aws-sdk-go/awstesting/integration/s3integ"
+	"github.com/yezzey-gp/aws-sdk-go/service/s3"
+	"github.com/yezzey-gp/aws-sdk-go/service/s3/s3manager"
 )
 
 func init() {

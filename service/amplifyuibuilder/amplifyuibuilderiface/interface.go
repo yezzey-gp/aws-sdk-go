@@ -9,9 +9,9 @@
 package amplifyuibuilderiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/amplifyuibuilder"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws/request"
+	"github.com/yezzey-gp/aws-sdk-go/service/amplifyuibuilder"
 )
 
 // AmplifyUIBuilderAPI provides an interface to enable mocking the

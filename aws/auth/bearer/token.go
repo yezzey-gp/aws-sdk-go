@@ -1,7 +1,7 @@
 package bearer
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
+	"github.com/yezzey-gp/aws-sdk-go/aws"
 	"time"
 )
 
